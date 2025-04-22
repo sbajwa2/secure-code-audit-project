@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey Form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <form id="survey-form" action="https://httpbin.org/post" method="POST">
+        <fieldset>
+            <legend>Survey Form</legend>
+            
+            <!-- Name Field -->
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" required>
+            <span class="error-message" id="name-error"></span>
+
+            <!-- Email Field -->
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <span class="error-message" id="email-error"></span>
+
+            <!-- Multiple choice (Radio Buttons) -->
+            <label>What do you like to do in your free time?</label>
+            <label><input type="radio" name="hobby" value="paint" required> Paint</label>
+            <label><input type="radio" name="hobby" value="sing"> Sing</label>
+            <label><input type="radio" name="hobby" value="other"> Other</label>
+            <span class="error-message" id="hobby-error"></span>
+
+            <!-- Multiple Selections (Checkboxes) -->
+            <label>What is you favorite movie genre?</label>
+            <label><input type="checkbox" name="movies" value="horror"> Horror</label>
+            <label><input type="checkbox" name="movies" value="slice of life"> Slice of life</label>
+            <label><input type="checkbox" name="movies" value="thriller"> Thriller</label>
+            <span class="error-message" id="movies-error"></span>
+
+            <!-- Dropdown Menu -->
+            <label for="mood">How are you feeling today?:</label>
+            <select id="mood" name="mood" required>
+                <option value="">--Select an option--</option>
+                <option value="excellent">Excellent</option>
+                <option value="good">Good</option>
+                <option value="bad">Bad</option>
+            </select>
+            <span class="error-message" id="mood-error"></span>
+
+            <!-- Regex Validation: Username -->
+            <label for="username">Username (Alphanumeric, 4-10 characters):</label>
+            <input type="text" id="username" name="username" pattern="[a-zA-Z0-9]{4,10}" required>
+            <span class="error-message" id="username-error"></span>
+
+            <!-- Custom Date Format -->
+            <label for="date">Date (DD-MM-YYYY):</label>
+            <input type="text" id="date" name="date" pattern="\d{2}-\d{2}-\d{4}" required>
+            <span class="error-message" id="date-error"></span>
+
+            <!-- Text Area -->
+            <label for="comments">Additional Comments:</label>
+            <textarea id="comments" name="comments" rows="4" cols="50"></textarea>
+
+            <!-- Submit Button -->
+            <button type="submit">Submit</button>
+        </fieldset>
+    </form>
+
+    <script src="script.js"></script>
+</body>
+</html>
