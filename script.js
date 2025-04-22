@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const usernameField = document.getElementById("username");
     const dateField = document.getElementById("date");
 
-    // Function to check if a field is not empty
+    // Function to check if the field is not empty
     function isNotEmpty(field) {
         return field.value.trim() !== "";
     }
