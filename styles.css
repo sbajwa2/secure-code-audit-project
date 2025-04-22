@@ -96,7 +96,7 @@ button:hover {
     display: none; 
 }
 
-/* Media Queries for Responsive Design */
+/* Media queries for Responsive Design */
 @media (max-width: 768px) {
     body {
         padding: 10px;
